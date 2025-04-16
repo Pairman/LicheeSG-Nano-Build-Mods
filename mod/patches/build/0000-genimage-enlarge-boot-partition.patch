@@ -1,0 +1,11 @@
+--- a/tools/common/sd_tools/genimage_rootless.cfg	2025-04-16 12:03:13.450770404 +0800
++++ b/tools/common/sd_tools/genimage_rootless.cfg	2025-04-16 12:03:45.145069088 +0800
+@@ -13,7 +13,7 @@ image boot.vfat {
+ 			"ver",
+                 }
+         }
+-        size = 16M 
++        size = 128M
+ }
+ 
+ image duo.img {
