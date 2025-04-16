@@ -11,10 +11,12 @@ cp -v "mod/$KERNEL_CONF" "$KERNEL_CONF"
 cp -v "mod/$KERNEL_CONF" "linux_5.10/arch/riscv/configs/"
 
 pushd "linux_5.10/"
+patch -Np1 -i ../mod/patches/linux_5.10/0001-clear-patches.patch
+patch -Np1 -i ../mod/patches/linux_5.10/0000-init-Kconfig-enable-O3-for-all-arches.patch
+popd
 
-patch -Np1 -i ../mod/kernel-patches/5.10/0001-clear-patches.patch
-patch -Np1 -i ../mod/kernel-patches/5.10/0000-init-Kconfig-enable-O3-for-all-arches.patch
-
+pushd osdrv
+patch -Np1 -i ../mod/patches/osdrv/0002-fix-cvivcdrv-vpuapi-init.patch
 popd
 
 popd
