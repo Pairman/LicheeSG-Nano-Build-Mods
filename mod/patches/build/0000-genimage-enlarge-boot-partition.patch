@@ -1,11 +1,34 @@
---- a/tools/common/sd_tools/genimage_rootless.cfg	2025-04-16 12:03:13.450770404 +0800
-+++ b/tools/common/sd_tools/genimage_rootless.cfg	2025-04-16 12:03:45.145069088 +0800
+diff --git a/build/tools/common/sd_tools/genimage.cfg b/build/tools/common/sd_tools/genimage.cfg
+index b97c9e9..bfc8cdd 100644
+--- a/build/tools/common/sd_tools/genimage.cfg
++++ b/build/tools/common/sd_tools/genimage.cfg
+@@ -6,14 +6,14 @@ image boot.vfat {
+ 			"rawimages/boot.sd",
+ 		}
+ 	}
+-	size = 128M
++	size = 512M
+ }
+ 
+ image rootfs.ext4 {
+ 	ext4 {
+ 		label = "rootfs"
+ 	}
+-	size = 256M
++	size = 1024M
+     mountpoint = "/"
+ }
+ 
+diff --git a/build/tools/common/sd_tools/genimage_rootless.cfg b/build/tools/common/sd_tools/genimage_rootless.cfg
+index af447e3..37fc55a 100644
+--- a/build/tools/common/sd_tools/genimage_rootless.cfg
++++ b/build/tools/common/sd_tools/genimage_rootless.cfg
 @@ -13,7 +13,7 @@ image boot.vfat {
  			"ver",
                  }
          }
 -        size = 16M 
-+        size = 128M
++        size = 512M
  }
  
  image duo.img {
