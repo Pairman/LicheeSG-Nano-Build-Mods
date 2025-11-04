@@ -1,8 +1,8 @@
 diff --git a/build/boards/sg200x/sg2002_licheervnano_sd/memmap.py b/build/boards/sg200x/sg2002_licheervnano_sd/memmap.py
-index 678edf1..0d185fd 100755
+index 678edf1..37e0334 100755
 --- a/build/boards/sg200x/sg2002_licheervnano_sd/memmap.py
 +++ b/build/boards/sg200x/sg2002_licheervnano_sd/memmap.py
-@@ -40,7 +40,7 @@ class MemoryMap:
+@@ -40,10 +40,10 @@ class MemoryMap:
      # =================
      # Multimedia buffer. Used by u-boot/kernel/FreeRTOS
      # =================
@@ -10,4 +10,8 @@ index 678edf1..0d185fd 100755
 +    ION_SIZE = 0 * SIZE_1M
      H26X_BITSTREAM_SIZE = 2 * SIZE_1M
      H26X_ENC_BUFF_SIZE = 0
-     ISP_MEM_BASE_SIZE = 20 * SIZE_1M
+-    ISP_MEM_BASE_SIZE = 20 * SIZE_1M
++    ISP_MEM_BASE_SIZE = 0 * SIZE_1M
+     FREERTOS_RESERVED_ION_SIZE = H26X_BITSTREAM_SIZE + H26X_ENC_BUFF_SIZE + ISP_MEM_BASE_SIZE
+ 
+     # ION after FreeRTOS
